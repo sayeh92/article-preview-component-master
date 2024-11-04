@@ -145,7 +145,8 @@ h1 {
   body {
     background-color: hsl(210, 46%, 95%);
     font-size: 13px;
-    position: relative
+    position: relative;
+    height: 100vh;
   }
   .main {
     flex-direction: column;
