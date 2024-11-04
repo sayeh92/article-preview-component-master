@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-weight: 700;
+}
+.main {
+  flex-direction: column;
+  display: flex;
+  margin: 4em;
+  position: relative;
+  /* max-width: 365px; */
+  width: 350px;
+}
+.card {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 10px 40px hsl(212, 23%, 69%);
+}
+
+.left {
+  /* width: 50%; */
+  flex: 1;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  flex: 2;
+  width: 100%;
+}
+#picture {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+#buttonSvg {
+  margin-top: 2em;
+  margin-right: 1.7em;
+}
+.author-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 7em;
+}
+
+.pop {
+  background-color: hsl(217, 19%, 35%);
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 7em;
+  display: none;
+  padding: 10px;
+}
+.sharehide {
+  padding-right: 0.9em;
+  padding-bottom: 10px;
+}
+.share {
+  color: hsl(212, 23%, 69%);
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2em;
+  margin-right: 1em;
+}
+.button-hide {
+  margin-bottom: 1.2em;
+  margin-right: 1em;
+}
+h1 {
+  padding: 0 22px 0 22px;
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 20px;
+}
+
+#mainText {
+  padding: 0 20px 0 20px;
+  color: hsl(212, 23%, 69%);
+  position: relative;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.date {
+  margin-top: 5px;
+  color: hsl(212, 23%, 69%);
+}
+.hideButton {
+  margin-left: 2em;
+}
+.avatar-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+.author-text {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  padding-top: 2em;
+  margin-right: 1em;
+}
+.picture {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+  padding: 20px;
+}
+#buttonDesktop {
+  display: none;
+}
+/* Styles for screens between mobile and desktop */
+@media only screen and (min-width: 1440px) {
+  body {
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    position: relative
+  }
+  .main {
+    flex-direction: column;
+    display: flex;
+    margin: 4em;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .card {
+    display: flex;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 10px 40px hsl(212, 23%, 69%);
+    width: 70em;
+    flex-direction: row;
+    height: 25em;
+    position: relative
+  }
+  .left {
+    width: 32em;
+  }
+
+  .right {
+    width: 70em;
+    padding-top: 1em;
+  }
+
+  #picture {
+    width: 32em;
+    border-radius: 15px 0 0 15px;
+  }
+  .author-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 7px;
+  }
+  .author-text {
+    margin-right: 12em;
+  }
+
+  .pop {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    top: 50%; /* Changed from bottom positioning */
+    left: calc(50% + 17.5em);
+    transform: translate(
+      20%,
+      -50%
+    ); /* Adjusted transform for better positioning */
+    width: 250px; /* Changed to fixed width */
+    height: auto; /* Changed to auto height */
+    min-height: 60px; /* Added minimum height */
+    z-index: 10;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.3s ease-out;
+  }
+
+  .pop::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%; /* Changed from right to left */
+    transform: translateX(-50%); /* Center the arrow */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+  }
+  .wrapper {
+    position: relative;
+  }
+  #buttonSvg {
+    margin-top: 2em;
+    margin-right: 1.7em;
+    display: flex;
+  }
+  #buttonDesktop {
+    margin-top: 2em;
+    margin-right: 1.7em;
+    display: none;
+  }
+  #mySvg {
+    margin-bottom: 5px;
+    display: none;
+  }
+  .hideButton {
+    display: none;
+  }
+}
