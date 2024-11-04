@@ -103,7 +103,7 @@ h1 {
 }
 
 #mainText {
-  padding: 0 20px 0 20px;
+  padding: 0 20px 5px 20px;
   color: hsl(212, 23%, 69%);
   position: relative;
   line-height: 2;
